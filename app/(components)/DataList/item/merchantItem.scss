@@ -1,0 +1,37 @@
+.shopping-item {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 15px 0 10px;
+
+  border-radius: 10px;
+  border: solid 1px #e1e1e1;
+  .image-box {
+    height: 60px;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+
+  h3 {
+    margin-top: 14.7px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.63;
+
+    text-align: center;
+    color: #999;
+  }
+
+  p {
+    margin-top: 1.7px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.82;
+
+    text-align: center;
+    color: #1d1d1d;
+    white-space: nowrap;
+  }
+}

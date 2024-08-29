@@ -1,13 +1,19 @@
+import AuthSession from "@/app/(provider)/AuthSession"
+
+
+
+
 export default function AuthLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="kr">
       <body>
-        <h1>Authlayout</h1>
-        {children}
+        <AuthSession>
+          {children}
+        </AuthSession>
       </body>
     </html>
   )

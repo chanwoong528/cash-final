@@ -1,0 +1,156 @@
+.card-item {
+  .image-box {
+    min-width: 120px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  h3 {
+    margin-top: 14.7px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.63;
+
+    text-align: center;
+    color: #999;
+  }
+
+  p {
+    margin-top: 1.7px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.82;
+
+    text-align: center;
+    color: #1d1d1d;
+    white-space: nowrap;
+  }
+}
+
+.table-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 29px;
+
+  width: 100%;
+
+  &.point-list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    padding: 50px 50px 0 50px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    min-height: 122px;
+  }
+  &.hotdeal-list {
+    grid-template-columns: repeat(4, 1fr);
+    > li {
+      width: calc(100% / 4);
+      cursor: pointer;
+      border: none;
+
+      .image-box {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h3 {
+        display: -webkit-box;
+        overflow: hidden;
+
+        font-size: 18px;
+        line-height: 1.56;
+        text-align: left;
+        color: #1d1d1d;
+
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .card-item {
+    .image-box {
+      min-width: 120px;
+      height: 60px;
+      margin: 0 auto;
+    }
+    h3 {
+      margin-top: 14.7px;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.63;
+
+      text-align: center;
+      color: #999;
+    }
+
+    p {
+      margin-top: 1.7px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.82;
+
+      text-align: center;
+      color: #1d1d1d;
+      white-space: nowrap;
+    }
+  }
+  .table-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 29px;
+
+    width: 1200px;
+
+    &.point-list {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      padding: 50px 50px 0 50px;
+      border: 1px solid #e1e1e1;
+      border-radius: 10px;
+      min-height: 442px;
+    }
+    &.hotdeal-list {
+      grid-template-columns: repeat(4, 1fr);
+      > li {
+        width: 262px;
+        cursor: pointer;
+        border: none;
+
+        .image-box {
+          width: 250px;
+          height: 250px;
+          border-radius: 10px;
+
+          img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        h3 {
+          display: -webkit-box;
+          overflow: hidden;
+
+          font-size: 18px;
+          line-height: 1.56;
+          text-align: left;
+          color: #1d1d1d;
+
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+}

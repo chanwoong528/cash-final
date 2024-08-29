@@ -1,0 +1,82 @@
+.bestBrand {
+  .default-slider {
+    .swiper-slide {
+      width: 100px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+
+    .brand-slider-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      width: 102px;
+      padding: 10px 16px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      img {
+        width: 60px;
+        object-fit: contain;
+      }
+
+      .brand-title {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .bestBrand {
+    .default-slider {
+      margin-top: 30px;
+      padding: 30px;
+
+      border-radius: 10px;
+      background-color: #f1f1f1;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: flex;
+      }
+
+      .brand-slider-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 207px;
+        background-color: #fff;
+        padding: 0;
+
+        border-radius: 10px;
+        border: solid 1px #e1e1e1;
+        overflow: hidden;
+
+        img {
+          width: 207px;
+          max-width: 100%;
+          object-fit: contain;
+        }
+
+        .brand-title {
+          display: block;
+          padding-bottom: 25px;
+          font-size: 16px;
+          font-weight: 400;
+          text-align: center;
+          color: #999;
+        }
+      }
+    }
+  }
+}

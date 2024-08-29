@@ -1,0 +1,358 @@
+.main-footer {
+  width: 100%;
+  margin: auto;
+
+  .isNotMobile {
+    display: none;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      padding: 13px 24px;
+      border-top: 1px solid #e5e5e5;
+
+      > li {
+        position: relative;
+        padding-left: 15px;
+        margin-left: 15px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 1px;
+          height: 12px;
+          margin-top: -6px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+
+        &:first-child {
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        &:first-child::before {
+          display: none;
+        }
+
+        a {
+          font-size: 13px;
+          font-weight: 500;
+          color: #1d1d1d;
+          line-height: 21px;
+
+          &.on {
+            font-weight: 700;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .sub-footer {
+    padding: 25px 24px 30px;
+    background: #f7f7f7;
+
+    .cs-info {
+      background: #fff;
+      display: block;
+      position: relative;
+      padding: 15px 20px;
+
+      header {
+        h4 {
+          font-size: 16px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.63;
+          letter-spacing: -0.4px;
+          text-align: left;
+          color: #1d1d1d;
+          margin-bottom: 34px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 5px;
+        height: 9px;
+        margin-top: -5px;
+        background-image: url(/asset/images/ico_arw_right.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 5px 9px;
+      }
+
+      a {
+        display: block;
+        width: 78px;
+        height: 21px;
+        overflow: hidden;
+        text-indent: -999px;
+        background-image: url(/asset/images/logo_kakao.png);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        background-size: 78px;
+      }
+
+      p {
+        margin-top: 14px;
+        font-size: 13px;
+        color: #666;
+        line-height: 21px;
+        letter-spacing: -0.65px;
+      }
+    }
+
+    h4,
+    p {
+      font-size: 10px;
+      color: #666;
+      line-height: 17px;
+      letter-spacing: -0.5px;
+    }
+
+    small {
+      margin-top: 13px;
+      font-size: 10px;
+      color: #666;
+      line-height: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .comp-info {
+      ul {
+        display: flex;
+        margin-top: 25px;
+        margin-bottom: 15px;
+
+        li {
+          position: relative;
+          padding-left: 8px;
+          margin-left: 8px;
+
+          &:first-child {
+            padding-left: 0;
+            margin-left: 0;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 1px;
+            height: 8px;
+            margin-top: -4px;
+            background: rgba(0, 0, 0, 0.2);
+          }
+          &:first-child::before {
+            display: none;
+          }
+
+          a {
+            font-size: 11px;
+            color: #666;
+            line-height: 21px;
+            letter-spacing: -0.55px;
+          }
+        }
+      }
+
+      address {
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  .appLink {
+    margin-top: 5%;
+    ul {
+      display: flex;
+      li {
+        margin-right: 3%;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .main-footer {
+    width: 100%;
+    height: 236px;
+    margin: auto;
+
+    .isNotMobile {
+      display: block;
+    }
+    .isMobile {
+      display: none;
+    }
+
+    nav {
+      height: 56.1px;
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      ul {
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        border-top: 0;
+        padding: 0;
+
+        > li {
+          &::before {
+            height: 15px;
+          }
+
+          &:nth-of-type(1) {
+            padding-left: 0;
+          }
+
+          &:nth-last-child(1) {
+            border: none;
+          }
+
+          a {
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.63;
+            letter-spacing: -0.4px;
+            text-align: left;
+            color: #888;
+          }
+        }
+      }
+    }
+
+    .sub-footer {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 50px auto 0;
+      padding: 0 250px 40px 0;
+      background: none;
+
+      h4,
+      p {
+        font-size: 13px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: -0.4px;
+        text-align: left;
+        color: #888;
+      }
+
+      small {
+        font-size: 13px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.86;
+        letter-spacing: -0.35px;
+        text-align: left;
+        color: #888;
+      }
+
+      .comp-info {
+        float: left;
+
+        address {
+          margin-bottom: 13px;
+        }
+
+        .isMobile {
+          display: none;
+        }
+      }
+
+      .cs-info {
+        float: right;
+        padding: 0;
+
+        &::after {
+          top: 15px;
+          left: 67px;
+          right: initial;
+        }
+
+        header {
+          h4 {
+            font-size: 16px;
+            font-weight: 700;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.63;
+            letter-spacing: -0.4px;
+            text-align: left;
+            color: #333;
+            margin-bottom: 20px;
+          }
+        }
+
+        a {
+          width: auto;
+          height: auto;
+          padding-left: 28px;
+          text-indent: 0;
+          background-image: url(/asset/images/kakao.png);
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+          background-size: 20px;
+          font-size: 16px;
+          font-weight: 700;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.63;
+          letter-spacing: -0.4px;
+
+          color: #333;
+        }
+
+        p {
+          margin-top: 10px;
+        }
+      }
+
+      .appLink {
+        position: absolute;
+        right: 0;
+        text-align: right;
+        ul {
+          display: block;
+          li {
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-footer {
+    .sub-footer {
+      padding: 0 400px 40px 0;
+
+      .appLink {
+        ul {
+          display: flex;
+        }
+      }
+    }
+  }
+}

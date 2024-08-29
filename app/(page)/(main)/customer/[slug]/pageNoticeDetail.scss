@@ -1,0 +1,124 @@
+.notice-view{
+  h3{
+    display: none;
+  }
+  header{
+    padding: 30px 24px 35px;
+    strong{
+      display: block;
+      font-size: 21px;
+      font-weight: 700;
+      color: #000;
+      line-height: 28px;
+      letter-spacing: -.5px;
+    }
+    p{
+      display: block;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #000;
+      letter-spacing: -.3px;
+    }
+  }
+
+  &_content{
+    padding: 40px 24px;
+    background: #f8f8f8;
+    font-size: 14px;
+    color: #000;
+    line-height: 21px;
+    letter-spacing: -.3px;
+  }
+
+  ul{
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .main-customer:has(.notice-view){
+    display: block;
+
+    &>nav {
+      h2 {
+        display: none;
+      }
+
+      ul {
+        display: none;
+      }
+    }
+
+    .main-customer-section {
+      width: 100%
+    }
+  }
+
+  .notice-view{
+    border-bottom: 2px solid #222;
+
+    h3{
+      display: block;
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    header{
+      display: flex;
+      padding: 40px 30px;
+      margin-top:50px;
+      border-top: 2px solid #222;
+      justify-content: space-between;
+      align-items: center;
+      
+      strong{
+        font-size: 26px;
+        line-height: 37px;
+        text-align: left;
+      }
+
+      p{
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 37px;
+        letter-spacing: -.8px;
+        text-align: right;
+        
+      }
+    }
+
+    &_content{
+      border-top: 1px solid #e1e1e1;
+      background: none;
+      padding: 50px 30px;
+      font-size: 18px;
+      letter-spacing: -.8px;
+      color: #666;
+      line-height: 35px;
+      text-align: left;
+      font-weight: 400;
+    }
+
+    ul{
+      display: block;
+      li{
+        border-top: 1px solid #e1e1e1;
+        padding: 33px;
+        a{
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 400;
+          color: #666;
+
+          b{
+            display: inline-block;
+            padding-right: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

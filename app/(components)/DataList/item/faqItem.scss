@@ -1,0 +1,95 @@
+.faqList-item {
+  padding: 0 24px;
+  border-bottom: 1px solid #dfdfdf;
+
+  button {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 30px 24px;
+    text-align: left;
+
+    .q-mark {
+      position: absolute;
+      top: 27px;
+      left: 0;
+      font-family: roboto, sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #0071e3;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 9px;
+      height: 5px;
+      margin-top: -3px;
+      background: url("/asset/icons/ico_arw_down.png") no-repeat 0 0 / 9px 5px;
+    }
+  }
+
+  article {
+    display: none;
+    padding: 0 0 30px;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+  }
+  .faq-btn.on + article {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .faqList-item {
+    padding: 0 24px;
+    border-bottom: 1px solid #dfdfdf;
+
+    button {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding: 30px 24px;
+      text-align: left;
+
+      .q-mark {
+        position: absolute;
+        top: 27px;
+        left: 0;
+        font-family: roboto, sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #0071e3;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 9px;
+        height: 5px;
+        margin-top: -3px;
+        background: url("/asset/icons/ico_arw_down.png") no-repeat 0 0 / 9px 5px;
+      }
+    }
+
+    article {
+      display: none;
+      padding: 0 0 30px;
+      font-size: 14px;
+      color: #666;
+      line-height: 20px;
+      letter-spacing: -0.3px;
+    }
+    .faq-btn.on + article {
+      display: block;
+    }
+  }
+}

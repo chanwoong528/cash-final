@@ -1,0 +1,53 @@
+.shopping-slider {
+  margin-top: 30px;
+  padding: 0 30px;
+
+  border-radius: 10px;
+  background-color: #f1f1f1;
+}
+.shopping-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  font-size: 18px;
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: solid 1px #e1e1e1;
+  padding: 20px;
+  gap: 10px;
+  a {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    margin: 0 auto;
+  }
+  .brand-title {
+    margin-top: 10px;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: #999;
+  }
+  .brand-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .brand-commission {
+      font-size: 30px;
+      font-weight: 700;
+      color: #dd3729;
+    }
+    .brand-like-btn {
+      width: 20px;
+      height: 18px;
+      font-size: 0;
+      background: url("/asset/icons/icon_heart.png");
+    }
+  }
+}

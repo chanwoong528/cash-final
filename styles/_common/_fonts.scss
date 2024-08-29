@@ -1,0 +1,83 @@
+// font-thin	font-weight: 100;
+// font-extralight	font-weight: 200;
+// font-light	font-weight: 300;
+// font-normal	font-weight: 400;
+// font-medium	font-weight: 500;
+// font-semibold	font-weight: 600;
+// font-bold	font-weight: 700;
+// font-extrabold	font-weight: 800;
+// font-black	font-weight: 900;
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  src: local("Noto Sans KR Black"),
+    url("./fonts/NotoSansKR-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  src: local("Noto Sans KR Bold"),
+    url("./fonts/NotoSansKR-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  src: local("Noto Sans KR Medium"),
+    url("./fonts/NotoSansKR-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  src: local("Noto Sans KR Regular"),
+    url("./fonts/NotoSansKR-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  src: local("Noto Sans KR Light"),
+    url("./fonts/NotoSansKR-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 100;
+  src: local("Noto Sans KR Thin"),
+    url("./fonts/NotoSansKR-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100;
+  src: local("Roboto Thin"), url("/fonts/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  src: local("Roboto Light"),
+    url("/fonts/Roboto-Medium.Light") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: local("Roboto Regular"),
+    url("/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: local("Roboto Medium"),
+    url("/fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: local("Roboto Bold"), url("/fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900;
+  src: local("Roboto Black"), url("/fonts/Roboto-Black.ttf") format("truetype");
+}

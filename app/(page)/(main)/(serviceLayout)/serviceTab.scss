@@ -1,0 +1,32 @@
+.serviceTab {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .serviceTab {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 50px;
+
+    .tabBtn {
+      display: inline-block;
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      border: 1px solid #e2e2e2;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+      background: unset;
+      cursor: pointer;
+
+      &.on {
+        background-color: #0071e3;
+        color: #fff;
+        border: unset;
+      }
+    }
+  }
+}

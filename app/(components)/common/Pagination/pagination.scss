@@ -1,0 +1,100 @@
+.pagination-con {
+  @mixin paginate-btn($imagePosition) {
+    background: url("/asset/images/paging/paginate_" + $imagePosition + ".png")
+      center center no-repeat;
+  }
+
+  $pageBtnSize: 25px;
+
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
+  line-height: 10px;
+
+  .pagination-list {
+    display: flex;
+    margin: 0 15px;
+    li {
+      align-items: center;
+      justify-content: center;
+      width: $pageBtnSize;
+      height: $pageBtnSize;
+      margin: 0 6px;
+      font-size: 11px;
+      color: #999;
+
+      &.on {
+        position: relative;
+        font-weight: 700;
+        color: #333;
+
+        &::after {
+          content: "";
+          clear: both;
+          display: block;
+          position: relative;
+          bottom: 0px;
+          left: 50%;
+          width: 12px;
+          border-bottom: 1px solid #333;
+          transform: translateX(-50%);
+        }
+      }
+      > button {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .paginate_btn {
+    display: block;
+    width: $pageBtnSize;
+    height: $pageBtnSize;
+    margin: 0 3px;
+    cursor: pointer;
+    // border: 1px solid #e1e1e1;
+    @include variable.ir-pm;
+
+    &-first {
+      @include paginate-btn("first");
+    }
+    &-prev {
+      @include paginate-btn("prev");
+    }
+    &-next {
+      @include paginate-btn("next");
+    }
+    &-last {
+      @include paginate-btn("last");
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .pagination-con {
+    $pageBtnSize: 40px;
+
+    .pagination-list {
+      display: flex;
+      margin: 0 15px;
+      li {
+        width: $pageBtnSize;
+        height: $pageBtnSize;
+        font-size: 16px;
+        &.on {
+          &::after {
+            bottom: 3px;
+            width: 18px;
+          }
+        }
+      }
+    }
+    .paginate_btn {
+      width: $pageBtnSize;
+      height: $pageBtnSize;
+      border: 1px solid #e1e1e1;
+    }
+  }
+}

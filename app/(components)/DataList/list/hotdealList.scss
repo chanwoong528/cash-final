@@ -1,0 +1,18 @@
+.hotdeal-list {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 19px;
+  background-color: #fff;
+}
+
+@media (min-width: 900px) {
+  .hotdeal-list {
+    display: grid;
+    max-width: 1200px;
+    gap: 50px 30px;
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

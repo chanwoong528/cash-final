@@ -1,0 +1,36 @@
+.hotdeal-main {
+  width: 100%;
+
+  .hotdeal-list-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .hotdeal-main {
+    .hotdeal-list-con {
+      margin: 50px 0;
+    }
+  }
+}
+.cn-banner {
+  width: 100%;
+  background-color: #a491b6;
+
+  h2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 240px;
+    margin: 0 auto;
+
+    > img {
+      object-fit: cover;
+    }
+  }
+}

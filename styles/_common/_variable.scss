@@ -1,0 +1,22 @@
+@mixin contents__wrap {
+  // width: 100%;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin product-list__title {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+@mixin ir-pm{
+  // Phark Method - 이미지 대체 텍스트
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} 

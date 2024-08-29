@@ -1,0 +1,86 @@
+.faq {
+  width: 100%;
+
+  h3 {
+    display: none;
+  }
+}
+
+.faq-nav {
+  padding: 30px 0 25px 24px;
+  border-bottom: 1px solid #dfdfdf;
+  overflow-x: auto;
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+
+    a {
+      display: block;
+      padding: 8px 18px;
+      margin-right: 8px;
+      background: #f1f1f1;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #666;
+      line-height: 15px;
+      letter-spacing: -0.7px;
+      white-space: nowrap;
+
+      &.on {
+        background: #0071e3;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .faq {
+    width: 100%;
+
+    h3 {
+      display: block;
+      padding: 70px 0 10px;
+      margin-bottom: 40px;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 40px;
+    }
+  }
+
+  .faq-nav {
+    padding: 0;
+    border-bottom: none;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    div {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      box-sizing: border-box;
+
+      a {
+        width: 172px;
+        height: 45px;
+        padding: 0;
+        margin-right: 0;
+        background: none;
+        border-radius: 0;
+        line-height: 45px;
+        text-align: center;
+        border: 1px solid #e1e1e1;
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+
+        &.on {
+          border: unset;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+// Test Code for Responsive css
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body > nav {
+  overflow-x: hidden;
+}

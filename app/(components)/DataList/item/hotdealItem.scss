@@ -1,0 +1,171 @@
+.hotdeal-item {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+  padding-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .image-box {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 100%;
+    width: 100%;
+    height: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      min-width: 100%;
+      width: 0;
+      height: 0;
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 18px;
+    word-break: break-all;
+    color: #1d1d1d;
+    text-overflow: ellipsis;
+    white-space: initial;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .info-box {
+    display: flex;
+
+    .percent {
+      margin-top: 13px;
+      color: #dd3729;
+      font-family: roboto, sans-serif;
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: -0.6px;
+      font-weight: 700;
+
+      abbr {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+
+    .price-box {
+      margin-top: 6px;
+      .op {
+        display: block;
+        margin-left: 5px;
+        text-decoration: line-through;
+        font-family: roboto, sans-serif;
+        margin-right: 1px;
+        font-size: 12px;
+        color: #999;
+        line-height: 12px;
+        letter-spacing: -0.5px;
+
+        abbr {
+          font-size: 10px;
+          color: #999;
+        }
+      }
+
+      .cp {
+        display: inline-block;
+        padding-left: 0;
+        margin-top: 0;
+        margin-left: 5px;
+        font-family: roboto, sans-serif;
+        font-size: 19px;
+        font-weight: 500;
+        color: #1d1d1d;
+        line-height: 19px;
+        vertical-align: bottom;
+        letter-spacing: -0.5px;
+
+        abbr {
+          font-size: 12px;
+          color: #1d1d1d;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .hotdeal-item {
+    width: 262px;
+    border: none;
+    padding: 0;
+
+    .image-box {
+      width: 250px;
+      padding-top: 250px;
+      border-radius: 10px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.56;
+    }
+
+    .info-box {
+      display: flex;
+
+      .percent {
+        margin-top: 26px;
+        font-size: 32px;
+        line-height: 1.2;
+
+        abbr {
+          font-size: 13px;
+          line-height: 1.2;
+        }
+      }
+
+      .price-box {
+        margin-top: 12px;
+        .op {
+          margin-left: 10px;
+          margin-right: 2px;
+          font-size: 15px;
+          line-height: 1.2;
+
+          abbr {
+            font-size: 12px;
+          }
+        }
+
+        .cp {
+          margin-left: 10px;
+          font-size: 30px;
+          line-height: 1.2;
+
+          abbr {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

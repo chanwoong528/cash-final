@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import "./pagination.scss"
 
-const PaginationDefault = ({ paginationData, totalPages }) => {
+const PaginationDefault = ({ paginationData, totalPages, type, setCurPage }) => {
   const { pageNumber, pageSize, paged, unpaged } = paginationData;
   const [currentPage, setCurrentPage] = useState(pageNumber + 1);
   const router = useRouter();
@@ -17,10 +17,19 @@ const PaginationDefault = ({ paginationData, totalPages }) => {
     } else if (!unpaged) {
       setCurrentPage(1);
     }
-  }, [pageNumber, paged, unpaged]);
+
+  }, [pageNumber, paged, unpaged, type]);
+
+  const onClickPageNumClient = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    setCurPage(pageNumber)
+  };
 
   const onClickPageNum = (pageNumber) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
+      if (type === "client") return onClickPageNumClient(pageNumber);
+
+
       setCurrentPage(pageNumber);
 
       if (searchParams.get('gubun') !== undefined && searchParams.get('gubun') !== null) {
@@ -60,7 +69,9 @@ const PaginationDefault = ({ paginationData, totalPages }) => {
           return (
             <li
               key={pageNumber}
-              className={pageNumber === currentPage ? "on" : ""}
+              className={
+
+                pageNumber === currentPage ? "on" : ""}
             >
               <button type="button" onClick={() => onClickPageNum(pageNumber)}>
                 {pageNumber}

@@ -14,10 +14,6 @@ async function getData() {
   //if directly passing searchParams, to below api call, it will refresh the page for some reason
   const pointShopNavData = await pointShopApi.getPointShopNav();
 
-  console.log(pointShopNavData)
-
-  // pointshopList > PS_FOOD
-
 
   return {
     category1List: pointShopNavData.categ1List,

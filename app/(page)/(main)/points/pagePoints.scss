@@ -1,22 +1,3 @@
-.cn-banner {
-  width: 100%;
-  background-color: #a491b6;
-
-  h2 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-    min-height: 240px;
-    margin: 0 auto;
-
-    > img {
-      object-fit: cover;
-    }
-  }
-}
-
 .points-list-con {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,7 @@
 //@ts-nocheck
 import React from 'react'
+import Link from 'next/link'
+
 import ImageWithFallback from '@/app/(components)/common/ImageWithFallback'
 
 import "./merchantItem.scss"
@@ -11,7 +13,35 @@ import "./merchantItem.scss"
 */
 
 
-const MerchantItem = ({ itemData }) => {
+const MerchantItem = ({ itemData, type }) => {
+
+  if (type === "detailPage") {
+    return (<div className='shopping-mall-item'>
+      <button className='mall-like-btn'>like brand</button>
+      <Link href={"/merchants/" + itemData.merchantId + (window?.location.search ?? "")}>
+        <ImageWithFallback
+          src={itemData.imageLink}
+          width={120}
+          height={60}
+          alt={itemData.siteName}
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+          }}
+        />
+        <p className='mall-title'>
+          {itemData.siteName}
+        </p>
+        <p className='mall-commission'>
+          최대 {itemData.commissionComment}
+        </p>
+      </Link>
+    </div>)
+
+  }
+
+
+
   return (
     <li className="card-item shopping-item" key={itemData.merchantId}>
       <a href="">

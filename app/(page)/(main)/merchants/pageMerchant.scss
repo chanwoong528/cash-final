@@ -1,0 +1,25 @@
+.merchant-main {
+  .main-shopping-table {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.merchant-list-con {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 50px;
+  }
+
+  .shopping-slider {
+    margin-top: 30px;
+    padding: 0 30px;
+
+    border-radius: 10px;
+    background-color: #f1f1f1;
+  }
+}

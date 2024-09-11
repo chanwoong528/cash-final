@@ -18,6 +18,8 @@ async function getData(searchParams) {
   };
   const hotDealDetailData = await productsApi.getDetailList(PATH_NAME.HOTDEAL, params);
 
+  console.log(hotDealDetailData.hotdealList?.pageable)
+
   return {
     subCategories: hotDealDetailData?.categ1List,
     itemList: hotDealDetailData.hotdealList?.contents,

@@ -24,17 +24,13 @@ async function getData() {
       await productsApi.getProductData("pointshops", params),
     ]
   );
-  console.log(hotDealData)
   return { merchantData, hotDealData, pointShopData };
 }
 
 
 export default async function Home() {
 
-
-
   const { merchantData, hotDealData, pointShopData } = await getData();
-  console.log(hotDealData);
 
   const onClickNavItem = (categCd) => { }
 
@@ -74,21 +70,15 @@ export default async function Home() {
       </section>
 
       <article className="main-banner">
-        <h3>스마트한 쇼핑 습관</h3>
-        <ol>
-          <li>
-            <p>회원가입</p>
-          </li>
-          <li>
-            <p>쇼핑 경유</p>
-          </li>
-          <li>
-            <p>캐시적립</p>
-          </li>
-          <li>
-            <p>환급or쿠폰</p>
-          </li>
-        </ol>
+        <h2>
+          <Image
+            src={"/asset/images/event-banner.png"}
+            objectFit="cover"
+
+            fill={true}
+            alt={"MD 추천 잇템!"}
+          />
+        </h2>
       </article>
 
       <section className={`itemtable`}>

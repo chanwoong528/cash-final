@@ -1,0 +1,35 @@
+.category-nav {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 30px;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  p {
+    width: 10%;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+  }
+  ul {
+    display: flex;
+    margin-left: 30px;
+    border-left: 1px solid #e1e1e1;
+    li {
+      button {
+        margin-left: 30px;
+
+        color: #666;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.875;
+        &.on {
+          color: #0071e3;
+          border-bottom: 1px solid #0071e3;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,16 @@
+//@ts-nocheck
+
+import Image from "next/image";
+
 import InnerPageNav from "@/app/(components)/common/Nav/InnerPageNav";
+import DefaultItemSlider from "@/app/(components)/common/Slider/DefaultItemSlider";
+
+
 import { PATH_NAME } from "@/app/(utils)/CONSTANT/CATEGORY";
 import { merchantApi } from "@/app/api/(services)/apiProducts";
+
+import "./pageMerchant.scss";
+import MerchantListWrap from "./MerchantListWrap";
 
 async function getData(searchParams) {
   let params = {
@@ -23,12 +33,34 @@ export default async function Home({ searchParams }) {
   const { merchantList, popmerchantList, category1List, category2List } = await getData(searchParams);
 
 
+
   return (
     <>
       <InnerPageNav pageType={PATH_NAME.MERCHANT} navList={category1List} />
 
-      <main>
-        marchat
+      <main className="merchant-main">
+
+        <header className="cn-banner">
+          <h2>
+            <Image
+              src={"/asset/images/shopping-banner.png"}
+              objectFit="cover"
+              fill={true}
+              alt={"MD 추천 잇템!"}
+            />
+          </h2>
+        </header>
+
+
+        <article className="merchant-list-con">
+          <h3>인기브랜드</h3>
+
+          <DefaultItemSlider itemList={popmerchantList} callPage={"shopping"} />
+        </article>
+        <div className='main-shopping-table'>
+          <MerchantListWrap itemList={merchantList} navList2nd={category2List} />
+        </div>
+
       </main>
     </>
   );

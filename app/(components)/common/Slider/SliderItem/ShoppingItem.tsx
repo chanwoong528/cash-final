@@ -14,7 +14,7 @@ const ShoppingItem = ({ item }) => {
   return (
     <>
       <div className="brand-slider-card shopping-card">
-        <Link href={`/shopping/${item.merchantId}${window?.location.search}`}>
+        <Link href={`/merchants/${item.merchantId}${window?.location.search}`}>
           <ImageWithFallback
             src={item.imageLink}
             width={120}

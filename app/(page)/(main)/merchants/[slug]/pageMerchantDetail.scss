@@ -1,0 +1,86 @@
+.main-shop-detail {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+
+  border: 1px solid #e1e1e1;
+
+  section {
+    .main-shop-detail-header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 40px 50px;
+
+      .main-shop-detail-header {
+        display: flex;
+        align-items: center;
+
+        .img-con {
+          padding: 25px 40px;
+          border: 1px solid #e1e1e1;
+          background-color: #fff;
+          border-radius: 10px;
+          margin-right: 40px;
+        }
+        .info-con {
+          h3 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #1d1d1d;
+          }
+          .sales-desc {
+            font-size: 30px;
+            font-weight: 700;
+            color: #dd3729;
+          }
+        }
+      }
+      .btn-con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        .like-btn {
+          background: url("/asset/icons/icon_mall_heart.png");
+          width: 40px;
+          height: 40px;
+          font-size: 0;
+        }
+        .link-to-mall {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #0071e3;
+          width: 300px;
+          height: 60px;
+          border: unset;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+    .brand-info-con {
+      p {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1d1d1d;
+        margin-top: 0;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 50px;
+      }
+      .text-inner {
+        overflow: hidden;
+
+        padding: 50px;
+        border: 1px solid #ddd;
+        background-color: #f8f8f8;
+        line-height: 1.2;
+      }
+    }
+  }
+}

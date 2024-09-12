@@ -80,6 +80,28 @@ export const merchantApi = {
       return { message: "500 error" };
     }
   },
+  getShoppingMallDetail: async (params) => {
+    const fetchMallDetail = await http.get(`/merchant/view`, {
+      params: params,
+    });
+    if (fetchMallDetail.code === 200) {
+      const data = await fetchMallDetail.data;
+      return data;
+    } else {
+      return { message: "500 error" };
+    }
+  },
+  getShoppingMallPage: async (params) => {
+    const fetchMallDetail = await http.get(`/merchant/view`, {
+      params: params,
+    });
+    if (fetchMallDetail.code === 200) {
+      const data = await fetchMallDetail.data;
+      return data;
+    } else {
+      return { message: "500 error" };
+    }
+  },
 };
 
 export const pointShopApi = {

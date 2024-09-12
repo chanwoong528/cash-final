@@ -16,7 +16,7 @@ export const FOOT_CATE = {
 
 export const PATH_NAME = {
   SHOPPING: "/merchants",
-  MERCHANT: "/merchant",
+  MERCHANT: "/merchants",
   POINT: "/points",
   HOTDEAL: "/hotdeal",
 };

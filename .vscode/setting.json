@@ -1,0 +1,41 @@
+{
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Cascadia Code",
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": 500,
+  "terminal.integrated.lineHeight": 1.1,
+  "prettier.tabWidth": 3,
+  "terminal.integrated.tabs.enableAnimation": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "workbench.colorCustomizations": {},
+  "editor.inlineSuggest.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "[css]": {
+    "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+  },
+  "git.autofetch": true,
+  "editor.formatOnType": true,
+  "css.lint.emptyRules": "error",
+  "html-css-class-completion.enableEmmetSupport": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "AndersEAndersen.html-class-suggestions",
+  "html.format.templating": true,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.trimAutoWhitespace": true,
+
+  "editor.cursorSmoothCaretAnimation": true,
+  "eslint.codeActionsOnSave.rules": {
+    "source.fixAll": "always"
+  },
+  "editor.wordWrap": "wordWrapColumn"
+}

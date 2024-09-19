@@ -1,8 +1,8 @@
 //@ts-nocheck
-import React from 'react'
-import ImageWithFallback from '@/app/(components)/common/ImageWithFallback'
+import React from "react";
+import ImageWithFallback from "@/app/(components)/common/ImageWithFallback";
 
-import "./pointShopItem.scss"
+import "./pointShopItem.scss";
 
 const PointShopItem = ({ itemData, psType }) => {
   // { categCd: 'popul', title: '인기브랜드' },
@@ -16,7 +16,7 @@ const PointShopItem = ({ itemData, psType }) => {
         <div className="image-box">
           <ImageWithFallback
             src={
-              itemData.image.includes('https://')
+              itemData.image.includes("https://")
                 ? itemData.image
                 : `https://${itemData.image}`
             }
@@ -28,7 +28,7 @@ const PointShopItem = ({ itemData, psType }) => {
         <h3>{itemData.brandName}</h3>
       </a>
     </li>
-  )
-}
+  );
+};
 
-export default PointShopItem
+export default PointShopItem;

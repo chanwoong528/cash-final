@@ -1,12 +1,11 @@
-import Footer from "@/app/(components)/common/Footer"
-import Header from "@/app/(components)/common/Header/Header"
-import AuthSession from "@/app/(provider)/AuthSession"
-
+import Footer from "@/app/(components)/common/Footer";
+import Header from "@/app/(components)/common/Header/Header";
+import AuthSession from "@/app/(provider)/AuthSession";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="kr">
@@ -18,5 +17,5 @@ export default function RootLayout({
         </AuthSession>
       </body>
     </html>
-  )
+  );
 }

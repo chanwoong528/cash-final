@@ -105,6 +105,31 @@ export const merchantApi = {
 };
 
 export const pointShopApi = {
+  getPointShopDetail: async (level, params) => {
+    const fetchPointshop = await http.get(`/pointshop/home/${level}`, {
+      params: params,
+    });
+
+    if (fetchPointshop.code === 200) {
+      let data = await fetchPointshop.data;
+      return data;
+    } else {
+      return { message: "500 error" };
+    }
+  },
+  getDetailList: async (urlGubun, params) => {
+    const fetchDetailList = await http.get(`${urlGubun}/list`, {
+      params: params,
+    });
+
+    if (fetchDetailList.code === 200) {
+      let data = await fetchDetailList.data;
+      return data;
+    } else {
+      return { message: "500 error" };
+    }
+  },
+
   getPointShopNav: async () => {
     const fetchPointshop = await http.get("/pointshop/home", {});
 

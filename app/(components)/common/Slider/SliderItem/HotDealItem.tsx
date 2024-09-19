@@ -8,7 +8,7 @@ import ImageWithFallback from "@/app/(components)/common/ImageWithFallback";
 import "./hotdealItem.scss";
 
 const HotDealItem = ({ item }) => {
-  console.log(item);
+  
   return (
     <Link href={`/hotdeal/${item.productNum}`}>
       <div className="hotdeal-slider-card">

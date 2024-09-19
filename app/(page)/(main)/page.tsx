@@ -3,41 +3,36 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { productsApi } from "@/app/api/(services)/apiProducts";
-import { CATE_LABEL, PRODUCT_TYPE, PATH_NAME } from "@/app/(utils)/CONSTANT/CATEGORY";
+import { PRODUCT_TYPE, PATH_NAME } from "@/app/(utils)/CONSTANT/CATEGORY";
 
 import HomeProductList from "@/app/(components)/DataList/list/HomeProductList";
 
-import "./pageHome.scss"
-
+import "./pageHome.scss";
 
 async function getData() {
-
+  [].forEach(() => {
+    console.log("test");
+  });
   let params = {
     pageNumber: 1,
     pageSize: 1,
   };
 
-  const [merchantData, hotDealData, pointShopData] = await Promise.all(
-    [
-      await productsApi.getProductData("merchants", params),
-      await productsApi.getProductData("hotdeals", params),
-      await productsApi.getProductData("pointshops", params),
-    ]
-  );
+  const [merchantData, hotDealData, pointShopData] = await Promise.all([
+    await productsApi.getProductData("merchants", params),
+    await productsApi.getProductData("hotdeals", params),
+    await productsApi.getProductData("pointshops", params),
+  ]);
   return { merchantData, hotDealData, pointShopData };
 }
 
-
 export default async function Home() {
-
   const { merchantData, hotDealData, pointShopData } = await getData();
 
-  const onClickNavItem = (categCd) => { }
-
+  // const onClickNavItem = (categCd) => { }
 
   return (
-    <main >
-
+    <main>
       <article className="main-jumbo">
         <Image
           width={1200}
@@ -50,7 +45,6 @@ export default async function Home() {
           }}
         />
       </article>
-
 
       <section className={`itemtable color`}>
         <header>
@@ -74,7 +68,6 @@ export default async function Home() {
           <Image
             src={"/asset/images/event-banner.png"}
             objectFit="cover"
-
             fill={true}
             alt={"MD 추천 잇템!"}
           />
@@ -109,8 +102,6 @@ export default async function Home() {
           포인트샵 전체보기
         </Link>
       </section>
-
-
     </main>
   );
 }

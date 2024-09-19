@@ -1,5 +1,5 @@
 //@ts-nocheck
-'use client';
+"use client";
 import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -8,18 +8,23 @@ import { PATH_NAME } from "@/app/(utils)/CONSTANT/CATEGORY";
 import "./innerPageNav.scss";
 
 const InnerPageNav = ({ pageType, navList }) => {
-
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const onClickTabBtn = (tableIdx, categCd) => {
-
-    if (pageType === PATH_NAME.POINT && categCd !== '') {
-      return router.push(`${pageType}/point_detail?categCd=${categCd}&categCd_lvl2=${categCd === 'PS_FOOD' ? 'CAFE' : categCd === 'PS_CONV' ? 'CONV' : 'COUPON'}&cpage=1`);
+    if (pageType === PATH_NAME.POINT && categCd !== "") {
+      return router.push(
+        `${pageType}/detail?categCd=${categCd}&categCd_lvl2=${
+          categCd === "PS_FOOD"
+            ? "CAFE"
+            : categCd === "PS_CONV"
+            ? "CONV"
+            : "COUPON"
+        }&cpage=1`
+      );
     }
 
     return router.push(`${pageType}?categCd=${!!categCd ? categCd : ""}`);
-
   };
 
   const renderActiveClassName = (item, idx) => {
@@ -28,8 +33,8 @@ const InnerPageNav = ({ pageType, navList }) => {
         return !searchParams.get("categCd") && idx === 0
           ? " on"
           : searchParams.get("categCd") === item.categCd
-            ? " on"
-            : "";
+          ? " on"
+          : "";
     }
   };
 
@@ -47,7 +52,7 @@ const InnerPageNav = ({ pageType, navList }) => {
         })}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default InnerPageNav
+export default InnerPageNav;

@@ -31,3 +31,30 @@
     }
   }
 }
+.card-item {
+  .image-box {
+    min-width: 120px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  h3 {
+    margin-top: 14.7px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.63;
+
+    text-align: center;
+    color: #999;
+  }
+
+  p {
+    margin-top: 1.7px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.82;
+
+    text-align: center;
+    color: #1d1d1d;
+    white-space: nowrap;
+  }
+}

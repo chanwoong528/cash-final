@@ -1,0 +1,60 @@
+.ps-detail-product-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 1200px;
+  margin: 0 auto 100px;
+
+  .ps-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    li {
+      padding: 15px;
+
+      p {
+        font-size: 16px;
+        color: #999;
+        font-weight: 500;
+        line-height: 1.5;
+
+        &:nth-child(3) {
+          color: #1d1d1d;
+        }
+      }
+
+      .point-price {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+
+        div {
+          background-image: url(/asset/images/point.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 26px;
+          height: 26px;
+          margin-top: 4px;
+          margin-right: 10px;
+        }
+
+        h3 {
+          font-size: 30px;
+          font-weight: 900;
+          margin-top: 0;
+          color: #1d1d1d;
+          font-family: "Roboto", sans-serif;
+
+          span {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1d1d1d;
+            padding-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}

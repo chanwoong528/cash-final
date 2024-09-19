@@ -1,34 +1,42 @@
-import Image from "next/image";
-import InnerPageNav from "@/app/(components)/common/Nav/InnerPageNav";
+//@ts-nocheck
 
-import { PATH_NAME } from "@/app/(utils)/CONSTANT/CATEGORY";
+import Image from "next/image";
+
 import { pointShopApi } from "@/app/api/(services)/apiProducts";
 
-import "./pagePoints.scss";
 import DefaultItemSlider from "@/app/(components)/common/Slider/DefaultItemSlider";
+import PointList from "@/app/(components)/DataList/list/PointList";
 
-async function getData() {
+import "./pagePoints.scss";
+
+async function getData(searchParams) {
   let params = {
-    // categCd: searchParams.categCd || null,
+    categCd: searchParams.categCd || null,
   };
-  //if directly passing searchParams, to below api call, it will refresh the page for some reason
-  const pointShopNavData = await pointShopApi.getPointShopNav();
 
+  const pointShopNavData = await pointShopApi.getPointShopNav(params);
 
   return {
     category1List: pointShopNavData.categ1List,
-    populpointshopList: pointShopNavData.populpointshopList
-  }
+    populpointshopList: pointShopNavData.populpointshopList,
+    itemListPsProduct: pointShopNavData.pointshopList.PS_PRODUCT,
+    itemListPsConv: pointShopNavData.pointshopList.PS_CONV,
+    itemListPsFood: pointShopNavData.pointshopList.PS_FOOD,
+    foodNavList: pointShopNavData.categ2List.PS_FOOD,
+  };
 }
 
-export default async function Home() {
-  const { category1List, populpointshopList } = await getData();
+export default async function Home({ searchParams }) {
+  const {
+    populpointshopList,
+    itemListPsProduct,
+    itemListPsConv,
+    itemListPsFood,
+    foodNavList,
+  } = await getData(searchParams);
   return (
     <>
-      <InnerPageNav pageType={PATH_NAME.POINT} navList={category1List} />
-
       <main className="points-main">
-
         {/* TOP Banner */}
         <header className="cn-banner">
           <h2>
@@ -45,12 +53,28 @@ export default async function Home() {
         <article className="points-list-con">
           <h3>인기브랜드</h3>
 
-          <DefaultItemSlider itemList={populpointshopList} callPage="bestBrand" title={undefined} />
+          <DefaultItemSlider
+            itemList={populpointshopList}
+            callPage="bestBrand"
+            title={undefined}
+          />
+
+          <div className="pointshop-table-wrap first">
+            <PointList categCd="PS_PRODUCT" data={itemListPsProduct} />
+          </div>
+
+          <div className="pointshop-table-wrap bg-g">
+            <PointList categCd="PS_CONV" data={itemListPsConv} />
+          </div>
+          <div className="pointshop-table-wrap">
+            <PointList
+              withNav
+              categCd="PS_FOOD"
+              data={itemListPsFood}
+              navData={foodNavList}
+            />
+          </div>
         </article>
-
-
-
-        point
       </main>
     </>
   );

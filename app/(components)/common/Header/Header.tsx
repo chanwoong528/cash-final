@@ -1,20 +1,27 @@
+//@ts-nocheck
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-import "./header.scss"
-
+import "./header.scss";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
-
-  // const session = useSession();
+  const { data } = useSession();
   const pathname = usePathname();
   const [showCS, setShowCS] = useState(false); //고객센터
   const [searchTerm, setSearchTerm] = useState("");
+  const [loggedInUser, setLoggedInUser] = useState(null);
 
+  useEffect(() => {
+    if (!!data?.user && data.message === "로그인 성공") {
+      setLoggedInUser(data.user);
 
+      console.log(data);
+    }
+  }, [data]);
 
   return (
     <>
@@ -38,7 +45,9 @@ const Header = () => {
             <input
               type="text"
               placeholder="검색하기"
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)}
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setSearchTerm(event.target.value)
+              }
             />
             <button className="search-btn">
               <Image
@@ -56,20 +65,14 @@ const Header = () => {
         </div>
         <ul className="right-nav-list">
           <li>
-            {
-              // session.data?.user?.email
-              //   ? <Link href="/">{session.data?.user?.email}</Link> :
+            {!!loggedInUser ? (
+              <Link href={"/mypage"}>{loggedInUser.email}</Link>
+            ) : (
               <Link href={"/login"}>로그인</Link>
-            }
+            )}
           </li>
           <li>
-            <button
-              onClick={() => {
-                setShowCS(!showCS);
-              }}
-            >
-              고객센터
-            </button>
+            <button onClick={() => setShowCS(!showCS)}>고객센터</button>
             {showCS && (
               <ul className="cs-list">
                 <li>
@@ -94,7 +97,9 @@ const Header = () => {
                     setShowCS(false);
                   }}
                 >
-                  <Link href="https://pf.kakao.com/_uJADxb" target="_blank">카카오톡 문의</Link>
+                  <Link href="https://pf.kakao.com/_uJADxb" target="_blank">
+                    카카오톡 문의
+                  </Link>
                 </li>
               </ul>
             )}
